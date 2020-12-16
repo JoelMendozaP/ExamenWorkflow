@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workflow</title>
-    <link rel="stylesheet" href="/src/style/style.css">
+    <link rel="stylesheet" href="src/style/style.css">
 </head>
 <?php
 $codFlujo = $_GET["codflujo"];
@@ -20,9 +20,9 @@ $archivo = $fila['pantalla'];
 ?>
 
 <body>
-    <h1>Motor de Flujo</h1>
+    <h1 class="motor__title">Motor de Flujo</h1>
     <br>
-    <form action="controlador.php" method="GET">
+    <form class="motor__form" action="controlador.php" method="GET">
         <?php
         include $archivo;
         ?>
@@ -31,8 +31,8 @@ $archivo = $fila['pantalla'];
         <input type="hidden" value="<?php echo $codprocesosiguiente; ?>" name="codprocesosiguiente" />
         <input type="hidden" value="<?php echo $tipo; ?>" name="tipo" />
         <input type="hidden" value="<?php echo $archivo; ?>" name="archivo" />
-        <input type="submit" value="Anterior" name="Anterior" />
-        <input type="submit" value="Siguiente" name="Siguiente" />
+        <input class="motor__btn motor__btn-a" type="submit" value="Anterior" name="Anterior" />
+        <input class="motor__btn motor__btn-s" type="submit" value="Siguiente" name="Siguiente" />
     </form>
 
 </body>
